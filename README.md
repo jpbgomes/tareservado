@@ -9,10 +9,12 @@ sudo nano /etc/apache2/sites-available/tareservado.conf
 <VirtualHost *:80>
     ServerName tareservado.pt
     ServerAlias www.tareservado.pt tareservado.com www.tareservado.com 
-    DocumentRoot /var/www/tareservado
+    DocumentRoot /var/www/tareservado/public
 
     <Directory /var/www/tareservado>
+        Options Indexes FollowSymLinks
         AllowOverride All
+        Require all granted
     </Directory>
 
     ErrorLog ${APACHE_LOG_DIR}/tareservado.log
@@ -58,6 +60,9 @@ sudo crontab -e
 0 4 * * * php /var/www/tareservado/artisan backup:database >> /dev/null 2>&1
 ```
 
+```bash
+sudo mysql -u root -p
+```
 
 ```bash
 CREATE DATABASE tareservado;
