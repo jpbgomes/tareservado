@@ -57,3 +57,12 @@ sudo crontab -e
 ```bash
 0 4 * * * php /var/www/tareservado/artisan backup:database >> /dev/null 2>&1
 ```
+
+
+```bash
+CREATE DATABASE tareservado;
+CREATE USER 'tareservado'@'localhost' IDENTIFIED BY '<dO>-O20]2P0';
+GRANT ALL PRIVILEGES ON tareservado.* TO 'tareservado'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+```
