@@ -3,21 +3,17 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     */
     public function run(): void
     {
-        // User::factory(10)->create();
-
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Equipa - Tá Reservado',
+            'email' => 'suporte@tareservado.pt',
+            'photo_url' => 'https://picsum.photos/500/500',
+            'bio' => 'Porque o seu tempo é importante !',
         ]);
     }
 }
