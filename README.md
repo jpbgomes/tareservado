@@ -1,5 +1,10 @@
 [Project Data - ChatGPT Conversation](project.pdf)
 
+```
+📅 Marcações online para negócios.
+🚀 Site + agenda num só lugar.
+```
+
 ## CREATE APACHE2 FILE E EDIT IT
 ```bash
 sudo nano /etc/apache2/sites-available/tareservado.conf
