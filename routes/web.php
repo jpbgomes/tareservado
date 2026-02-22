@@ -8,6 +8,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('home');
 
+Route::get('/login', function () {
+    return view('components.login');
+})->name('login');
+// Route::get('/login', Login::class)->name('login');
+
 // SWITCH LANG
 
 Route::get('lang/{locale}', function (string $locale) {
